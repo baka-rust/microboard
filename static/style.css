@@ -1,0 +1,55 @@
+body {
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	background: #F6FFE0;
+	color: #000000;
+}
+
+h1 {
+	text-align: center;
+	font-weight: normal;
+}
+
+hr {
+	border: 0;
+	border-bottom: 1px dashed #BDD684;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+hr.post {
+	border: 0;
+	border-bottom: 1px dashed #F6FFE0;
+	margin-top: 2px;
+	margin-bottom: 5px;
+}
+
+a {
+	color: #10222B;
+}
+
+a:hover {
+	color: #E2F0D6;
+}
+
+#content {
+	width: 850px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.thread {
+	background: #95AB63;
+	min-width: 500px;
+	padding: 5px;
+}
+
+div.post {
+	background: #BDD684;
+	min-width: 500px;
+	margin-top: 15px;
+	padding: 5px;
+}
+
+span.post-info {
+	font-size: 13px;
+}
