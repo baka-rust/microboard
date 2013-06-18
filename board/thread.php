@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>/board/ - Board Title</title>
+		<title>Thread Title</title>
 		<link rel="stylesheet" type="text/css" href="../static/style.css" />
 	</head>
 	
@@ -15,13 +15,13 @@
 			<hr>
 		
 			<div class="thread" id="1">
-				<span class="post-info">Month Day, Year @ Time <a href="#number">#number</a> <span class="more">[<a href="thread.php">more</a>]</span></span>
+				<span class="post-info">Month Day, Year @ Time <a href="#number">#number</a> <span class="more">[<a href="index.php">back</a>]</span></span>
 				<hr class="post">
 				thread content
 			</div>
 			
-			<div class="thread" id="2">
-				<span class="post-info">Month Day, Year @ Time <a href="#number">#number</a> <span class="more">[<a href="thread.php">more</a>]</span></span>
+			<div class="post" id="2">
+				<span class="post-info">Month Day, Year @ Time <a href="#number">#number</a></span>
 				<hr class="post">
 				reply content
 			</div>
