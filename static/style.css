@@ -9,6 +9,10 @@ h1 {
 	font-weight: normal;
 }
 
+b {
+	color: #BDD684;
+}
+
 hr {
 	border: 0;
 	border-bottom: 1px dashed #BDD684;
@@ -48,6 +52,10 @@ div.post {
 	min-width: 500px;
 	margin-top: 15px;
 	padding: 5px;
+}
+
+div.nav {
+	text-align: center;
 }
 
 span.post-info {
