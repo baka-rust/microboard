@@ -58,6 +58,21 @@ div.nav {
 	text-align: center;
 }
 
+div.top-nav {
+	text-align: center;
+	font-size: 11px;
+	margin-bottom: 0px;
+}
+
 span.post-info {
 	font-size: 13px;
+}
+
+div.footer {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 11px;
 }
