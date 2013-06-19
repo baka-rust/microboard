@@ -8,13 +8,15 @@
 			$DBH->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION)
 		}
 		catch(PDOException $exception) {
-			echo $exception->getMessage();
+			file_put_contents('errorlog.txt', $exception->getMessage(), FILE_APPEND);
 		}
 	}
 	
 	function GetThreads($board, $page) {
 		$StartRange = ($page * 10) - 10
 		$EndRange = $page * 10
+		
+		$STH = $DBH->query('SELECT * FROM threads'); //the "threads" table will change to the name of the board
 	}
 
 ?>
