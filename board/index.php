@@ -13,6 +13,14 @@
 			<h1>/board/ - Board Title</h1>
 		
 			<hr>
+			
+			<div class="post-box">
+				<form name="thread" action="../src/post.php" method="post">
+					<textarea class="post" name="content" ></textarea>
+					</br>
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
 		
 			<div class="thread" id="1">
 				<span class="post-info">Month Day, Year @ Time <a href="#number">#number</a> <span class="more">[<a href="thread.php">more</a>]</span></span>

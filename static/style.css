@@ -13,6 +13,11 @@ b {
 	color: #BDD684;
 }
 
+textarea.post{
+	min-width: 500px;
+	width: 100%;
+}
+
 hr {
 	border: 0;
 	border-bottom: 1px dashed #BDD684;
@@ -55,6 +60,16 @@ div.post {
 	padding: 5px;
 }
 
+div.post-box {
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 500px;
+	max-width: 600px;
+	margin-bottom: 15px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
 div.nav {
 	text-align: center;
 }
@@ -70,6 +85,10 @@ span.post-info {
 }
 
 span.more {
+	float: right;
+}
+
+span.post-button {
 	float: right;
 }
 

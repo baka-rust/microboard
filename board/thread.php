@@ -26,6 +26,14 @@
 				reply content
 			</div>
 			
+			<div class="post-box">
+				<form name="thread" action="../src/post.php" method="post">
+					<textarea class="post" name="content" ></textarea>
+					</br>
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+			
 			<div class="footer">powered by <a href="https://github.com/baka-rust/microboard">microboard</a></div>
 		
 		</div>
