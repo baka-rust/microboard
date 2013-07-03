@@ -17,7 +17,7 @@
 		$EndRange = $Page * 10;
 		
 		$STH = $DBH->prepare('SELECT * FROM ? WHERE parent="0" LIMIT ?, ?'); //parent being the parent thread to a reply, 0 meaning its a thread
-		$STH->execute(array($board, $StartRange, $EndRange));
+		$STH->execute(array($Board, $StartRange, $EndRange));
 		$Rows = $STH->fetchAll(PDO::FETCH_ASSOC);
 		
 		foreach($Rows as $Row) {
@@ -28,6 +28,22 @@
 						'.$Row["content"].'
 					</div>
 			');	//change second $Row["id"] to javascript to insert quote into postbox for that id
+		}
+	}
+	
+	function GetPosts($Board, $Thread) {
+		$STH = $DBH->prepare('SELECT * FROM ? WHERE parent="?"');
+		$STH->execute(array($Board, $Thread));
+		$Rows = $STH->fetchAll(PDO::FETCH_ASSOC);
+		
+		foreach($Rows as $Row) {
+			print('
+				<div class="post" id="'.$Row["id"].'">
+					<span class="post-info"> '.$Row["date"].' @ '.$Row["time"].' <a href="#'.$Row["id"].'">#'.$Row["id"].'</a></span>
+					<hr class="post">
+					'.$Row["content"].'
+				</div>
+			');
 		}
 	}
 
