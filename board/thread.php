@@ -1,3 +1,9 @@
+<?php
+	$Board = basename(getcwd());
+	include('../src/functions.php');
+	DatabaseConnect();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,17 +20,17 @@
 		
 			<hr>
 		
-			<div class="thread" id="1">
-				<span class="post-info">Month Day, Year @ Time <a href="#number">#number</a> <span class="more">[<a href="index.php">back</a>]</span></span>
-				<hr class="post">
-				thread content
-			</div>
+			<?php
 			
-			<div class="post" id="2">
-				<span class="post-info">Month Day, Year @ Time <a href="#number">#number</a></span>
-				<hr class="post">
-				reply content
-			</div>
+				if(isset($_GET['id'])) {
+					GetParent($Board, $_GET['id']);
+					GetPosts($Board, $_GET['id']);
+				}
+				else {
+					print("Thread not found.");
+				}
+			
+			?>
 			
 			<div class="post-box">
 				<form name="thread" action="../src/post.php" method="post">

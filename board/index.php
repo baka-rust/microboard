@@ -1,3 +1,9 @@
+<?php
+	$Board = basename(getcwd());
+	include('../src/functions.php');
+	DatabaseConnect();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -22,17 +28,14 @@
 				</form>
 			</div>
 		
-			<div class="thread" id="1">
-				<span class="post-info">Month Day, Year @ Time <a href="#number">#number</a> <span class="more">[<a href="thread.php">more</a>]</span></span>
-				<hr class="post">
-				thread content
-			</div>
-			
-			<div class="thread" id="2">
-				<span class="post-info">Month Day, Year @ Time <a href="#number">#number</a> <span class="more">[<a href="thread.php">more</a>]</span></span>
-				<hr class="post">
-				reply content
-			</div>
+			<?php
+				if(isset($_GET['p'])) {
+					GetThreads($Board, $_GET['p']);
+				}
+				else {
+					GetThreads($Board, '1');
+				}
+			?>
 			
 			<div class="footer">powered by <a href="https://github.com/baka-rust/microboard">microboard</a></div>
 		
